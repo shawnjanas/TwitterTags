@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+            var data = {{meta}};
+
+            $('h1').html(data.twitterhandle);
+            for(i in data.tags) {
+               var tag = data.tags[i];
+               $('#cloud').append('<span style="padding: 5px;color: rgb('+tag.weight+',0,0);font-size:'+(tag.weight)+';font-weight:'+tag.weight+';">'+tag.tag+'</span>');
+            }
+            for(i in data.suggestions) {
+               var suggestion = data.suggestions[i];
+               $('#suggestions').append('<div><a href="'+suggestion+'">'+suggestion+'</a></div>');
+            }
+         });
+      </script>
+   </head>
+   <body>
+      <h1></h1>
+      <div id="cloud"></div>
+      <h2>Suggestions</h2>
+      <div id="suggestions"></div>
+   </body>
+</html>

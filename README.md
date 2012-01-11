@@ -2,9 +2,9 @@
 
 Run
 
-   node app.js
+    node app.js
 
 Requests
 
-   http://localhost/twittertags/?handle=shawnjanas&datatype=json
-   http://localhost/twittertags/?handle=shawnjanas&datatype=html
+    http://localhost/twittertags/?handle=shawnjanas&datatype=json
+    http://localhost/twittertags/?handle=shawnjanas&datatype=html
